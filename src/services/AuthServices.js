@@ -111,4 +111,30 @@ export const changePassword = async (data) => {
     }
 }
 
+export const getAllUsers = async () => {
+    try {
+        const response = await api.get(`/auth/admin/users`, {
+        });
+        return response?.data;
+    }
+    catch (error) {
+        if (error.response) {
+            return error.response.data;
+        }
+        throw error;
+    }
+}
 
+export const adminDeleteUser = async (userId) => {
+    try {
+        const response = await api.delete(`/auth/admin/users/${userId}`, {
+        });
+        return response?.data;
+    }
+    catch (error) {
+        if (error.response) {
+            return error.response.data;
+        }
+        throw error;
+    }
+}

@@ -43,6 +43,16 @@ const Sidebar = ({ isSidebar }) => {
               <span>Order Food</span>
             </div>
           </Link>
+          <Link
+            className={`nav-link list-group-item list-group-item-action list-group-item-light p-3 ${pathname === "/admin/account-management" ? "active" : ""
+              }`}
+            to="/admin/account-management"
+          >
+            <div className="d-flex align-items-center">
+              <i className="bi bi-people-fill me-2"></i>
+              <span>Account Management</span>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

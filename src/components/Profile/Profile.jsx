@@ -97,6 +97,7 @@ const Profile = () => {
   };
 
   const handleSubmit = async (e) => {
+    console.log({data})
     e.preventDefault();
     setIsLoading(true);
     try {
@@ -134,10 +135,10 @@ const Profile = () => {
       });
     }
   }, [user, isUpdate]);
-
+  console.log("user", user)
   return (
     <div className="min-vh-100 d-flex align-items-center justify-content-center" style={{
-      background: 'linear-gradient(135deg,rgb(183, 184, 159) 0%,rgb(203, 203, 203) 100%)',
+      background: 'linear-gradient(135deg,rgb(188, 188, 184) 0%,rgb(199, 190, 190) 100%)',
       padding: '2rem 0'
     }}>
       <div className="container-fluid">
@@ -171,13 +172,13 @@ const Profile = () => {
             <div className="card shadow-lg border-0" style={{
               borderRadius: '20px',
               overflow: 'hidden',
-              background: 'rgba(255, 255, 255, 0.95)',
+              background: 'linear-gradient(135deg,rgb(250, 250, 248) 0%,rgb(215, 208, 208) 100%)',
               backdropFilter: 'blur(10px)'
             }}>
               <div className="row g-0">
                 {/* Profile Image Section */}
                 <div className="col-12 col-md-4 d-flex flex-column align-items-center p-4" style={{
-                  background: 'linear-gradient(135deg,rgb(183, 184, 159) 0%,rgb(203, 203, 203)',
+                  background: 'linear-gradient(135deg,rgb(250, 250, 248) 0%,rgb(215, 208, 208) 100%)',
                   color: 'white'
                 }}>
                   <div className="position-relative mb-3">

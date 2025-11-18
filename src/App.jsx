@@ -25,6 +25,7 @@ import ListFood from "./pages/ListFood/ListFood";
 import AddFood from "./pages/AddFood/AddFood";
 import Orders from "./pages/Orders/Orders";
 import "./App.css";
+import AccountManagement from "./pages/AccountManagement/AccountManagement";
 
 // Layout component với Authentication + Menubar
 const AuthenticatedLayout = ({ children }) => {
@@ -171,6 +172,14 @@ const App = () => {
           element={
             <AdminLayout>
               <Orders />
+            </AdminLayout>
+          }
+        />
+        <Route
+          path="/admin/account-management"
+          element={
+            <AdminLayout>
+              <AccountManagement />
             </AdminLayout>
           }
         />

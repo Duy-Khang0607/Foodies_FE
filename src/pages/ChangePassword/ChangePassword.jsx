@@ -38,15 +38,14 @@ const ChangePassword = () => {
     setIsLoading(true);
     try {
       const response = await changePassword(data);
-
-      if (response?.data?.success) {
-        console.log("response", response)
-        toast.success(response?.data?.message);
+      console.log("response", response)
+      if (response?.success) {
+        toast.success(response?.message);
       } else {
-        toast.error(response.response.data.errors[0]);
+        toast.error(response?.message);
       }
     } catch (error) {
-      toast.error('Lỗi API');
+      toast.error('Lỗi hệ thống vui lòng thử lại sau');
     } finally {
       setIsLoading(false);
     }
